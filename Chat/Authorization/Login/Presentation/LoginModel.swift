@@ -17,7 +17,7 @@ final class LoginModel {
     
     func userLogin(email: String, password: String) {
         guard !email.isEmpty, !password.isEmpty else {
-            loginVC?.showAlertUserLoginError()
+            loginVC?.showAlertUserLoginEmpty()
             return
         }
         print(email)

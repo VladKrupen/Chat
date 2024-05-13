@@ -18,6 +18,9 @@
 		017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FF42BF154D5008F6EA1 /* CustomColor.swift */; };
 		017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26ED2BF1F10500E6D2E4 /* LoginModel.swift */; };
 		017D26F12BF1F68300E6D2E4 /* LoginButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F02BF1F68300E6D2E4 /* LoginButtonDelegate.swift */; };
+		017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F32BF2103900E6D2E4 /* RegisterView.swift */; };
+		017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */; };
+		017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		017C0FF42BF154D5008F6EA1 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		017D26ED2BF1F10500E6D2E4 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		017D26F02BF1F68300E6D2E4 /* LoginButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonDelegate.swift; sourceTree = "<group>"; };
+		017D26F32BF2103900E6D2E4 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButtonDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				017C0FEC2BF14437008F6EA1 /* Controller */,
-				017C0FED2BF1443E008F6EA1 /* View */,
+				017C0FED2BF1443E008F6EA1 /* Views */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -130,17 +136,19 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		017C0FED2BF1443E008F6EA1 /* View */ = {
+		017C0FED2BF1443E008F6EA1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				017C0FF12BF14482008F6EA1 /* LoginView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		017C0FEE2BF14457008F6EA1 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				017D26F82BF2153600E6D2E4 /* Protocols */,
+				017D26F52BF214C700E6D2E4 /* Presentation */,
 				017C0FEF2BF14466008F6EA1 /* UI */,
 			);
 			path = Register;
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				017C0FF02BF1446B008F6EA1 /* Controller */,
+				017D26F22BF2102000E6D2E4 /* Views */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,6 +191,30 @@
 			isa = PBXGroup;
 			children = (
 				017D26F02BF1F68300E6D2E4 /* LoginButtonDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		017D26F22BF2102000E6D2E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				017D26F32BF2103900E6D2E4 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		017D26F52BF214C700E6D2E4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		017D26F82BF2153600E6D2E4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -257,10 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				017C0FF22BF14482008F6EA1 /* LoginView.swift in Sources */,
+				017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */,
 				017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */,
 				017C0FE72BF13A8B008F6EA1 /* LoginViewController.swift in Sources */,
 				017C0FE92BF140CE008F6EA1 /* RegisterViewController.swift in Sources */,
 				017C0FD42BF10D2A008F6EA1 /* SplashViewController.swift in Sources */,
+				017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */,
+				017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */,
 				017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */,
 				017D26F12BF1F68300E6D2E4 /* LoginButtonDelegate.swift in Sources */,
 				017C0FD02BF10D2A008F6EA1 /* AppDelegate.swift in Sources */,

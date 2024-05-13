@@ -53,6 +53,7 @@ final class LoginView: UIView {
         passwordField.autocorrectionType = .no
         passwordField.returnKeyType = .done
         passwordField.isSecureTextEntry = true
+        passwordField.textContentType = .oneTimeCode
         passwordField.layer.cornerRadius = 12
         passwordField.layer.borderWidth = 1
         passwordField.layer.borderColor = CustomColor().customBlue.cgColor
@@ -87,6 +88,7 @@ final class LoginView: UIView {
         return button
     }()
     
+    //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -147,25 +149,33 @@ final class LoginView: UIView {
         NSLayoutConstraint.activate([
             loginButton.topAnchor.constraint(equalTo: stackField.bottomAnchor, constant: 20),
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            loginButton.widthAnchor.constraint(equalToConstant: 100)
+            loginButton.leadingAnchor.constraint(equalTo: stackField.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: stackField.trailingAnchor)
         ])
     }
 }
 
+//MARK: - OBJC
 extension LoginView {
     @objc private func loginButtonTapped() {
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
         guard let email = emailField.text,
               let password = passwordField.text else { return }
         loginButtonDelegate?.loginButtonPressed(email: email, password: password)
     }
 }
 
+//MARK: - UITextFieldDelegate
 extension LoginView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == emailField {
+        switch textField {
+        case emailField:
             passwordField.becomeFirstResponder()
-        } else if textField == passwordField {
+        case passwordField:
             loginButtonTapped()
+        default:
+            return true
         }
         return true
     }

@@ -10,7 +10,6 @@ import UIKit
 final class LoginViewController: UIViewController {
  
     private let loginView: LoginView = LoginView()
-    
     private lazy var model = LoginModel(loginVC: self)
     
     override func loadView() {
@@ -24,7 +23,7 @@ final class LoginViewController: UIViewController {
         setupDelegates()
     }
     
-    func showAlertUserLoginError() {
+    func showAlertUserLoginEmpty() {
         let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Хорошо", style: .cancel, handler: nil)
         alert.addAction(okAction)
@@ -49,6 +48,7 @@ final class LoginViewController: UIViewController {
     
 }
 
+//MARK: - OBJC
 extension LoginViewController {
     @objc private func rightBarButtonTapped() {
         let registerVC = RegisterViewController()
@@ -57,6 +57,7 @@ extension LoginViewController {
     }
 }
 
+//MARK: - LoginButtonDelegate
 extension LoginViewController: LoginButtonDelegate {
     func loginButtonPressed(email: String, password: String) {
         model.userLogin(email: email, password: password)
