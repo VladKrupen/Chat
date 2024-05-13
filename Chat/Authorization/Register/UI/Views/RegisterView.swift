@@ -10,6 +10,7 @@ import UIKit
 final class RegisterView: UIView {
     
     weak var registerButtonDelegate: RegisterButtonDelegate?
+    weak var changingProfileAvatarDelegate: ChangingProfileAvatarDelegate?
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -18,15 +19,16 @@ final class RegisterView: UIView {
         return scrollView
     }()
     
-    private let logoImage: UIImageView = {
+    private let avatarImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "person.fill")
         imageView.layer.cornerRadius = 100
         imageView.layer.borderWidth = 3
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.tintColor = .white
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         imageView.backgroundColor = CustomColor().customBlue
+        imageView.isUserInteractionEnabled = true
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,6 +77,7 @@ final class RegisterView: UIView {
         let emailField = UITextField()
         emailField.autocapitalizationType = .none
         emailField.autocorrectionType = .no
+        emailField.keyboardType = .emailAddress
         emailField.returnKeyType = .continue
         emailField.layer.cornerRadius = 12
         emailField.layer.borderWidth = 1
@@ -137,6 +140,7 @@ final class RegisterView: UIView {
         backgroundColor = .white
         layoutElements()
         scrollingWhenOpeningKeyboard()
+        setupTapGestureImageView()
     }
     
     required init?(coder: NSCoder) {
@@ -145,6 +149,15 @@ final class RegisterView: UIView {
     
     func makePasswordFieldEmpty() {
         passwordField.text = ""
+    }
+    
+    func changeAvatarImage(image: UIImage) {
+        avatarImage.image = image
+    }
+    
+    private func setupTapGestureImageView() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(changeAvatarDidTap))
+        avatarImage.addGestureRecognizer(gesture)
     }
     
     private func layoutElements() {
@@ -166,13 +179,13 @@ final class RegisterView: UIView {
     }
     
     private func layoutLogoImage() {
-        scrollView.addSubview(logoImage)
+        scrollView.addSubview(avatarImage)
         
         NSLayoutConstraint.activate([
-            logoImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 10),
-            logoImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            logoImage.heightAnchor.constraint(equalToConstant: 200),
-            logoImage.widthAnchor.constraint(equalToConstant: 200)
+            avatarImage.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 10),
+            avatarImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            avatarImage.heightAnchor.constraint(equalToConstant: 200),
+            avatarImage.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
     
@@ -184,7 +197,7 @@ final class RegisterView: UIView {
         scrollView.addSubview(stackField)
         
         NSLayoutConstraint.activate([
-            stackField.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 20),
+            stackField.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 20),
             stackField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 25),
             stackField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -25),
             firstnameField.heightAnchor.constraint(equalToConstant: 50),
@@ -229,6 +242,10 @@ extension RegisterView {
               let email = emailField.text,
               let password = passwordField.text else { return }
         registerButtonDelegate?.registerButtonPressed(firstname: firstname, lastname: lastname, email: email, password: password)
+    }
+    
+    @objc private func changeAvatarDidTap() {
+        changingProfileAvatarDelegate?.changeProfileAvatar()
     }
     
     @objc private func keyboardWillShow(_ notification: Notification) {

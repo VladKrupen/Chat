@@ -21,6 +21,7 @@
 		017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F32BF2103900E6D2E4 /* RegisterView.swift */; };
 		017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */; };
 		017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */; };
+		017D26FC2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		017D26F32BF2103900E6D2E4 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButtonDelegate.swift; sourceTree = "<group>"; };
+		017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingProfileAvatarDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */,
+				017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */,
 				017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */,
 				017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */,
+				017D26FC2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift in Sources */,
 				017D26F12BF1F68300E6D2E4 /* LoginButtonDelegate.swift in Sources */,
 				017C0FD02BF10D2A008F6EA1 /* AppDelegate.swift in Sources */,
 				017C0FD22BF10D2A008F6EA1 /* SceneDelegate.swift in Sources */,
