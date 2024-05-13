@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		017C0FD02BF10D2A008F6EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FCF2BF10D2A008F6EA1 /* AppDelegate.swift */; };
 		017C0FD22BF10D2A008F6EA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FD12BF10D2A008F6EA1 /* SceneDelegate.swift */; };
-		017C0FD42BF10D2A008F6EA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FD32BF10D2A008F6EA1 /* ViewController.swift */; };
-		017C0FD72BF10D2A008F6EA1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 017C0FD62BF10D2A008F6EA1 /* Base */; };
+		017C0FD42BF10D2A008F6EA1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FD32BF10D2A008F6EA1 /* SplashViewController.swift */; };
 		017C0FD92BF10D2B008F6EA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017C0FD82BF10D2B008F6EA1 /* Assets.xcassets */; };
 		017C0FDC2BF10D2B008F6EA1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 017C0FDB2BF10D2B008F6EA1 /* Base */; };
+		017C0FE72BF13A8B008F6EA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FE62BF13A8B008F6EA1 /* LoginViewController.swift */; };
+		017C0FE92BF140CE008F6EA1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FE82BF140CE008F6EA1 /* RegisterViewController.swift */; };
+		017C0FF22BF14482008F6EA1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FF12BF14482008F6EA1 /* LoginView.swift */; };
+		017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017C0FF42BF154D5008F6EA1 /* CustomColor.swift */; };
+		017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26ED2BF1F10500E6D2E4 /* LoginModel.swift */; };
+		017D26F12BF1F68300E6D2E4 /* LoginButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F02BF1F68300E6D2E4 /* LoginButtonDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		017C0FCC2BF10D2A008F6EA1 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		017C0FCF2BF10D2A008F6EA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		017C0FD12BF10D2A008F6EA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		017C0FD32BF10D2A008F6EA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		017C0FD62BF10D2A008F6EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		017C0FD32BF10D2A008F6EA1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		017C0FD82BF10D2B008F6EA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		017C0FDB2BF10D2B008F6EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		017C0FDD2BF10D2B008F6EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		017C0FE62BF13A8B008F6EA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		017C0FE82BF140CE008F6EA1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		017C0FF12BF14482008F6EA1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		017C0FF42BF154D5008F6EA1 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		017D26ED2BF1F10500E6D2E4 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		017D26F02BF1F68300E6D2E4 /* LoginButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,124 @@
 		017C0FCE2BF10D2A008F6EA1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				017C0FCF2BF10D2A008F6EA1 /* AppDelegate.swift */,
-				017C0FD12BF10D2A008F6EA1 /* SceneDelegate.swift */,
-				017C0FD32BF10D2A008F6EA1 /* ViewController.swift */,
-				017C0FD52BF10D2A008F6EA1 /* Main.storyboard */,
+				017C0FE42BF132A5008F6EA1 /* Application */,
+				017C0FE32BF13275008F6EA1 /* Resources */,
+				017C0FD32BF10D2A008F6EA1 /* SplashViewController.swift */,
+				017C0FE52BF13A54008F6EA1 /* Authorization */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		017C0FE32BF13275008F6EA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FF32BF154BD008F6EA1 /* CustomColor */,
 				017C0FD82BF10D2B008F6EA1 /* Assets.xcassets */,
 				017C0FDA2BF10D2B008F6EA1 /* LaunchScreen.storyboard */,
 				017C0FDD2BF10D2B008F6EA1 /* Info.plist */,
 			);
-			path = Chat;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		017C0FE42BF132A5008F6EA1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FCF2BF10D2A008F6EA1 /* AppDelegate.swift */,
+				017C0FD12BF10D2A008F6EA1 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		017C0FE52BF13A54008F6EA1 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FEA2BF14428008F6EA1 /* Login */,
+				017C0FEE2BF14457008F6EA1 /* Register */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		017C0FEA2BF14428008F6EA1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				017D26EF2BF1F66600E6D2E4 /* Protocols */,
+				017D26EC2BF1F0E800E6D2E4 /* Presentation */,
+				017C0FEB2BF14432008F6EA1 /* UI */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		017C0FEB2BF14432008F6EA1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FEC2BF14437008F6EA1 /* Controller */,
+				017C0FED2BF1443E008F6EA1 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		017C0FEC2BF14437008F6EA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FE62BF13A8B008F6EA1 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		017C0FED2BF1443E008F6EA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FF12BF14482008F6EA1 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		017C0FEE2BF14457008F6EA1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FEF2BF14466008F6EA1 /* UI */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		017C0FEF2BF14466008F6EA1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FF02BF1446B008F6EA1 /* Controller */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		017C0FF02BF1446B008F6EA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FE82BF140CE008F6EA1 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		017C0FF32BF154BD008F6EA1 /* CustomColor */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FF42BF154D5008F6EA1 /* CustomColor.swift */,
+			);
+			path = CustomColor;
+			sourceTree = "<group>";
+		};
+		017D26EC2BF1F0E800E6D2E4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				017D26ED2BF1F10500E6D2E4 /* LoginModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		017D26EF2BF1F66600E6D2E4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				017D26F02BF1F68300E6D2E4 /* LoginButtonDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +246,6 @@
 			files = (
 				017C0FD92BF10D2B008F6EA1 /* Assets.xcassets in Resources */,
 				017C0FDC2BF10D2B008F6EA1 /* Base in Resources */,
-				017C0FD72BF10D2A008F6EA1 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017C0FD42BF10D2A008F6EA1 /* ViewController.swift in Sources */,
+				017C0FF22BF14482008F6EA1 /* LoginView.swift in Sources */,
+				017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */,
+				017C0FE72BF13A8B008F6EA1 /* LoginViewController.swift in Sources */,
+				017C0FE92BF140CE008F6EA1 /* RegisterViewController.swift in Sources */,
+				017C0FD42BF10D2A008F6EA1 /* SplashViewController.swift in Sources */,
+				017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */,
+				017D26F12BF1F68300E6D2E4 /* LoginButtonDelegate.swift in Sources */,
 				017C0FD02BF10D2A008F6EA1 /* AppDelegate.swift in Sources */,
 				017C0FD22BF10D2A008F6EA1 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +271,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		017C0FD52BF10D2A008F6EA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				017C0FD62BF10D2A008F6EA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		017C0FDA2BF10D2B008F6EA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,10 +410,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57V9Y33D2J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Chat/Info.plist;
+				INFOPLIST_FILE = Chat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,10 +437,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57V9Y33D2J;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Chat/Info.plist;
+				INFOPLIST_FILE = Chat/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
