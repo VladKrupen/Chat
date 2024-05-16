@@ -99,6 +99,11 @@ final class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func clearTextField() {
+        emailField.text = ""
+        passwordField.text = ""
+    }
+    
     private func layoutElements() {
         layoutScrollView()
         layoutLogoImage()

@@ -10,7 +10,8 @@ import UIKit
 final class LoginViewController: UIViewController {
  
     private let loginView: LoginView = LoginView()
-    private lazy var model = LoginModel(loginVC: self)
+    private let firebaseLoginManager = FirebaseLoginManager()
+    private lazy var model = LoginModel(loginVC: self, firebaseLoginManager: firebaseLoginManager)
     
     override func loadView() {
         super.loadView()
@@ -23,8 +24,23 @@ final class LoginViewController: UIViewController {
         setupDelegates()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loginView.clearTextField()
+    }
+    
     func showAlertUserLoginEmpty() {
         let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Хорошо", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alert, animated: true)
+        }
+    }
+    
+    func showAlertIncorrectData() {
+        let alert = UIAlertController(title: "Ошибка", message: "Неправильный логи или пароль", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Хорошо", style: .cancel, handler: nil)
         alert.addAction(okAction)
         
@@ -45,7 +61,6 @@ final class LoginViewController: UIViewController {
     private func setupDelegates() {
         loginView.loginButtonDelegate = self
     }
-    
 }
 
 //MARK: - OBJC

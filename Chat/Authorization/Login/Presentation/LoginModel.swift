@@ -10,9 +10,11 @@ import Foundation
 final class LoginModel {
     
     private weak var loginVC: LoginViewController?
+    private let firebaseLoginManager: FirebaseLoginManager
     
-    init(loginVC: LoginViewController?) {
+    init(loginVC: LoginViewController?, firebaseLoginManager: FirebaseLoginManager) {
         self.loginVC = loginVC
+        self.firebaseLoginManager = firebaseLoginManager
     }
     
     func userLogin(email: String, password: String) {
@@ -20,7 +22,13 @@ final class LoginModel {
             loginVC?.showAlertUserLoginEmpty()
             return
         }
-        print(email)
-        print(password)
+        
+        firebaseLoginManager.authUser(email: email, password: password) { [weak self] error in
+            guard error == nil else {
+                self?.loginVC?.showAlertIncorrectData()
+                return
+            }
+            print("Успешно")
+        }
     }
 }

@@ -10,7 +10,8 @@ import UIKit
 final class RegisterViewController: UIViewController {
     
     private let registerView: RegisterView = RegisterView()
-    private lazy var model = RegisterModel(registerVC: self)
+    private let firebaseRegistrationManager = FirebaseRegistrationManager()
+    private lazy var model = RegisterModel(registerVC: self, userAuthentication: firebaseRegistrationManager)
     
     override func loadView() {
         super.loadView()
@@ -37,6 +38,16 @@ final class RegisterViewController: UIViewController {
         let okAction = UIAlertAction(title: "Хорошо", style: .cancel) { [weak self] _ in
             self?.registerView.makePasswordFieldEmpty()
         }
+        alert.addAction(okAction)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alert, animated: true)
+        }
+    }
+    
+    func showAlertIncorrectEmail() {
+        let alert = UIAlertController(title: "Ошибка", message: "Некорректный адрес электронной почты", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Хорошо", style: .default, handler: nil)
         alert.addAction(okAction)
         
         DispatchQueue.main.async { [weak self] in

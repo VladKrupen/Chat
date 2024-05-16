@@ -10,9 +10,11 @@ import Foundation
 final class RegisterModel {
     
     weak var registerVC: RegisterViewController?
+    private let userAuthentication: UserAuthentication
     
-    init(registerVC: RegisterViewController?) {
+    init(registerVC: RegisterViewController?, userAuthentication: UserAuthentication) {
         self.registerVC = registerVC
+        self.userAuthentication = userAuthentication
     }
 
     func userRegister(firstname: String, lastname: String, email: String, password: String) {
@@ -27,6 +29,12 @@ final class RegisterModel {
             registerVC?.showAlertErrorShortPassword()
             return
         }
-        print(firstname)
+        userAuthentication.authUser(email: email, password: password) { [weak self] error in
+            guard error == nil else {
+                self?.registerVC?.showAlertIncorrectEmail()
+                return
+            }
+            
+        }
     }
 }
