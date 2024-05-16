@@ -144,7 +144,6 @@ final class LoginView: UIView {
             stackField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -25),
             emailField.heightAnchor.constraint(equalToConstant: 50),
             passwordField.heightAnchor.constraint(equalToConstant: 50)
-            
         ])
     }
     
