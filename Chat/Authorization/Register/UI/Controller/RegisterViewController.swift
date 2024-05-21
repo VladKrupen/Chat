@@ -11,7 +11,7 @@ final class RegisterViewController: UIViewController {
     
     private let registerView: RegisterView = RegisterView()
     private let firebaseRegistrationManager = FirebaseRegistrationManager()
-    private lazy var model = RegisterModel(registerVC: self, userAuthentication: firebaseRegistrationManager)
+    private lazy var model = RegisterModel(registerVC: self, userAuthentication: firebaseRegistrationManager, userCreator: firebaseRegistrationManager)
     
     override func loadView() {
         super.loadView()

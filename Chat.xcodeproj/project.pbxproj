@@ -30,6 +30,11 @@
 		017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */; };
 		017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */; };
 		017D26FC2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */; };
+		017E84532BFBC34400EED6E3 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84522BFBC34400EED6E3 /* UserCreator.swift */; };
+		017E84562BFBC85300EED6E3 /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84552BFBC85300EED6E3 /* ChatAppUser.swift */; };
+		018D82532BFA84F4002E65BF /* FirebaseUserStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */; };
+		018D82552BFA852F002E65BF /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82542BFA852F002E65BF /* UserStatus.swift */; };
+		018D82572BFA8561002E65BF /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82562BFA8561002E65BF /* SplashModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +60,11 @@
 		017D26F62BF214DE00E6D2E4 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButtonDelegate.swift; sourceTree = "<group>"; };
 		017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingProfileAvatarDelegate.swift; sourceTree = "<group>"; };
+		017E84522BFBC34400EED6E3 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
+		017E84552BFBC85300EED6E3 /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
+		018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserStatusManager.swift; sourceTree = "<group>"; };
+		018D82542BFA852F002E65BF /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
+		018D82562BFA8561002E65BF /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,33 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		016B8FED2BFA6A5C00AD8A1F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				018D82512BFA84E2002E65BF /* Manager */,
+				018D82502BFA84D7002E65BF /* Protocols */,
+				018D824F2BFA84C7002E65BF /* Presentation */,
+				016B8FEE2BFA6BD000AD8A1F /* UI */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		016B8FEE2BFA6BD000AD8A1F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				016B8FEF2BFA6BE500AD8A1F /* Controller */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		016B8FEF2BFA6BE500AD8A1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				017C0FD32BF10D2A008F6EA1 /* SplashViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		017C0FC32BF10D2A008F6EA1 = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +145,8 @@
 			children = (
 				017C0FE42BF132A5008F6EA1 /* Application */,
 				017C0FE32BF13275008F6EA1 /* Resources */,
-				017C0FD32BF10D2A008F6EA1 /* SplashViewController.swift */,
+				017E84542BFBC83B00EED6E3 /* Models */,
+				016B8FED2BFA6A5C00AD8A1F /* Splash */,
 				017C0FE52BF13A54008F6EA1 /* Authorization */,
 			);
 			path = Chat;
@@ -255,8 +293,41 @@
 				017D26F92BF2166100E6D2E4 /* RegisterButtonDelegate.swift */,
 				017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */,
 				015004932BF683CF00F2A948 /* UserAuthentication.swift */,
+				017E84522BFBC34400EED6E3 /* UserCreator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		017E84542BFBC83B00EED6E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				017E84552BFBC85300EED6E3 /* ChatAppUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		018D824F2BFA84C7002E65BF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				018D82562BFA8561002E65BF /* SplashModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		018D82502BFA84D7002E65BF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				018D82542BFA852F002E65BF /* UserStatus.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		018D82512BFA84E2002E65BF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,17 +412,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				015004942BF683D000F2A948 /* UserAuthentication.swift in Sources */,
+				018D82532BFA84F4002E65BF /* FirebaseUserStatusManager.swift in Sources */,
 				017C0FF22BF14482008F6EA1 /* LoginView.swift in Sources */,
 				017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */,
+				018D82552BFA852F002E65BF /* UserStatus.swift in Sources */,
 				017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */,
 				017C0FE72BF13A8B008F6EA1 /* LoginViewController.swift in Sources */,
 				017C0FE92BF140CE008F6EA1 /* RegisterViewController.swift in Sources */,
 				017C0FD42BF10D2A008F6EA1 /* SplashViewController.swift in Sources */,
 				017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */,
+				017E84562BFBC85300EED6E3 /* ChatAppUser.swift in Sources */,
 				017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */,
 				017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */,
+				018D82572BFA8561002E65BF /* SplashModel.swift in Sources */,
 				015004972BF688D900F2A948 /* FirebaseLoginManager.swift in Sources */,
 				015004922BF682A000F2A948 /* FirebaseRegistrationManager.swift in Sources */,
+				017E84532BFBC34400EED6E3 /* UserCreator.swift in Sources */,
 				017D26FC2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift in Sources */,
 				017D26F12BF1F68300E6D2E4 /* LoginButtonDelegate.swift in Sources */,
 				017C0FD02BF10D2A008F6EA1 /* AppDelegate.swift in Sources */,

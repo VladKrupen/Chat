@@ -7,8 +7,12 @@
 
 import UIKit
 import Lottie
+import FirebaseAuth
 
 final class SplashViewController: UIViewController {
+    
+    private let firebaseUserStatusManager = FirebaseUserStatusManager()
+    private lazy var model = SplashModel(splashVC: self, userStatus: firebaseUserStatusManager)
     
     private let lottieAnimation = LottieAnimationView(name: "splash")
     
@@ -17,6 +21,13 @@ final class SplashViewController: UIViewController {
         view.backgroundColor = .white
         setupLottieAnimation()
         showAnimation()
+        try? Auth.auth().signOut()
+    }
+    
+    func moveToLoginScreen() {
+        let loginVC = UINavigationController(rootViewController: LoginViewController())
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
     }
     
     private func setupLottieAnimation() {
@@ -30,15 +41,9 @@ final class SplashViewController: UIViewController {
     private func showAnimation() {
         lottieAnimation.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.moveToLoginScreen()
+            self.model.isUserAuthorized()
             self.lottieAnimation.stop()
         }
-    }
-    
-    private func moveToLoginScreen() {
-        let loginVC = LoginViewController()
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true)
     }
 }
 
