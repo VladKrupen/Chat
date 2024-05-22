@@ -41,7 +41,7 @@ final class FirebaseRegistrationManager: UserAuthentication, UserCreator {
             return
         }
         
-        self.databaseRef.child("Users").child(userId).updateChildValues(userJSON) { error, _ in
+        self.databaseRef.child("Users").child(userId).setValue(userJSON) { error, _ in
             completion(error)
         }
     }

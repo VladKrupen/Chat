@@ -29,6 +29,12 @@ final class LoginViewController: UIViewController {
         loginView.clearTextField()
     }
     
+    func moveToMainTabBarController() {
+        let mainTabBarController = MainTabBarController()
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        present(mainTabBarController, animated: true)
+    }
+    
     func showAlertUserLoginEmpty() {
         let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Хорошо", style: .cancel, handler: nil)

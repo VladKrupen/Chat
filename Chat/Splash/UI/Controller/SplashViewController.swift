@@ -21,13 +21,19 @@ final class SplashViewController: UIViewController {
         view.backgroundColor = .white
         setupLottieAnimation()
         showAnimation()
-        try? Auth.auth().signOut()
+//        try? Auth.auth().signOut()
     }
     
     func moveToLoginScreen() {
         let loginVC = UINavigationController(rootViewController: LoginViewController())
         loginVC.modalPresentationStyle = .fullScreen
         self.present(loginVC, animated: true)
+    }
+    
+    func moveToMainTabBarController() {
+        let mainTabBarController = MainTabBarController()
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        present(mainTabBarController, animated: true)
     }
     
     private func setupLottieAnimation() {

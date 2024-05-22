@@ -28,7 +28,7 @@ final class LoginModel {
                 self?.loginVC?.showAlertIncorrectData()
                 return
             }
-            print("Успешно")
+            self?.loginVC?.moveToMainTabBarController()
         }
     }
 }

@@ -37,7 +37,7 @@ final class RegisterModel {
                 return
             }
             self?.userCreator.createUser(firstname: firstname, lastname: lastname, email: email) { [weak self] _ in
-                    
+                self?.registerVC?.moveToMainTabBarController()
             }
         }
     }

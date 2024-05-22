@@ -32,6 +32,9 @@
 		017D26FC2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */; };
 		017E84532BFBC34400EED6E3 /* UserCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84522BFBC34400EED6E3 /* UserCreator.swift */; };
 		017E84562BFBC85300EED6E3 /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84552BFBC85300EED6E3 /* ChatAppUser.swift */; };
+		017E84592BFE629F00EED6E3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84582BFE629F00EED6E3 /* MainTabBarController.swift */; };
+		017E84632BFE64E700EED6E3 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84622BFE64E700EED6E3 /* ChatsViewController.swift */; };
+		017E84652BFE651B00EED6E3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84642BFE651B00EED6E3 /* ProfileViewController.swift */; };
 		018D82532BFA84F4002E65BF /* FirebaseUserStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */; };
 		018D82552BFA852F002E65BF /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82542BFA852F002E65BF /* UserStatus.swift */; };
 		018D82572BFA8561002E65BF /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82562BFA8561002E65BF /* SplashModel.swift */; };
@@ -62,6 +65,9 @@
 		017D26FB2BF257F400E6D2E4 /* ChangingProfileAvatarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingProfileAvatarDelegate.swift; sourceTree = "<group>"; };
 		017E84522BFBC34400EED6E3 /* UserCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreator.swift; sourceTree = "<group>"; };
 		017E84552BFBC85300EED6E3 /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
+		017E84582BFE629F00EED6E3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		017E84622BFE64E700EED6E3 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		017E84642BFE651B00EED6E3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserStatusManager.swift; sourceTree = "<group>"; };
 		018D82542BFA852F002E65BF /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		018D82562BFA8561002E65BF /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 				017E84542BFBC83B00EED6E3 /* Models */,
 				016B8FED2BFA6A5C00AD8A1F /* Splash */,
 				017C0FE52BF13A54008F6EA1 /* Authorization */,
+				017E84572BFE626B00EED6E3 /* TabBarController */,
+				017E845A2BFE63ED00EED6E3 /* Chats */,
+				017E845B2BFE648100EED6E3 /* Profile */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -306,6 +315,78 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		017E84572BFE626B00EED6E3 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				017E84582BFE629F00EED6E3 /* MainTabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		017E845A2BFE63ED00EED6E3 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				017E845C2BFE649800EED6E3 /* UI */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		017E845B2BFE648100EED6E3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				017E845F2BFE64C100EED6E3 /* UI */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		017E845C2BFE649800EED6E3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				017E845E2BFE64B600EED6E3 /* Controller */,
+				017E845D2BFE64AF00EED6E3 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		017E845D2BFE64AF00EED6E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		017E845E2BFE64B600EED6E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				017E84622BFE64E700EED6E3 /* ChatsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		017E845F2BFE64C100EED6E3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				017E84612BFE64CA00EED6E3 /* Controller */,
+				017E84602BFE64C500EED6E3 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		017E84602BFE64C500EED6E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		017E84612BFE64CA00EED6E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				017E84642BFE651B00EED6E3 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		018D824F2BFA84C7002E65BF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,8 +494,11 @@
 			files = (
 				015004942BF683D000F2A948 /* UserAuthentication.swift in Sources */,
 				018D82532BFA84F4002E65BF /* FirebaseUserStatusManager.swift in Sources */,
+				017E84592BFE629F00EED6E3 /* MainTabBarController.swift in Sources */,
 				017C0FF22BF14482008F6EA1 /* LoginView.swift in Sources */,
 				017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */,
+				017E84632BFE64E700EED6E3 /* ChatsViewController.swift in Sources */,
+				017E84652BFE651B00EED6E3 /* ProfileViewController.swift in Sources */,
 				018D82552BFA852F002E65BF /* UserStatus.swift in Sources */,
 				017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */,
 				017C0FE72BF13A8B008F6EA1 /* LoginViewController.swift in Sources */,

@@ -23,7 +23,7 @@ final class SplashModel {
                 self?.splashVC?.moveToLoginScreen()
                 return
             }
-            print("Основная часть")
+            self?.splashVC?.moveToMainTabBarController()
         }
     }
 }

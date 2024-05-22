@@ -23,6 +23,12 @@ final class RegisterViewController: UIViewController {
         setupDelegates()
     }
     
+    func moveToMainTabBarController() {
+        let mainTabBarController = MainTabBarController()
+        mainTabBarController.modalPresentationStyle = .fullScreen
+        present(mainTabBarController, animated: true)
+    }
+    
     func showAlertUserRegisterEmpty() {
         let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Хорошо", style: .cancel, handler: nil)
