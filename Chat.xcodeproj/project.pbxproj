@@ -35,6 +35,11 @@
 		017E84592BFE629F00EED6E3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84582BFE629F00EED6E3 /* MainTabBarController.swift */; };
 		017E84632BFE64E700EED6E3 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84622BFE64E700EED6E3 /* ChatsViewController.swift */; };
 		017E84652BFE651B00EED6E3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84642BFE651B00EED6E3 /* ProfileViewController.swift */; };
+		017E84672C049CD200EED6E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84662C049CD200EED6E3 /* ProfileView.swift */; };
+		017E846C2C04A24000EED6E3 /* LogOutButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E846B2C04A24000EED6E3 /* LogOutButtonDelegate.swift */; };
+		017E846E2C04A28D00EED6E3 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E846D2C04A28D00EED6E3 /* ProfileModel.swift */; };
+		017E84702C04A3E900EED6E3 /* FirebaseProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E846F2C04A3E900EED6E3 /* FirebaseProfileManager.swift */; };
+		017E84722C04A6CC00EED6E3 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E84712C04A6CC00EED6E3 /* Logout.swift */; };
 		018D82532BFA84F4002E65BF /* FirebaseUserStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */; };
 		018D82552BFA852F002E65BF /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82542BFA852F002E65BF /* UserStatus.swift */; };
 		018D82572BFA8561002E65BF /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D82562BFA8561002E65BF /* SplashModel.swift */; };
@@ -68,6 +73,11 @@
 		017E84582BFE629F00EED6E3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		017E84622BFE64E700EED6E3 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		017E84642BFE651B00EED6E3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		017E84662C049CD200EED6E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		017E846B2C04A24000EED6E3 /* LogOutButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonDelegate.swift; sourceTree = "<group>"; };
+		017E846D2C04A28D00EED6E3 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		017E846F2C04A3E900EED6E3 /* FirebaseProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProfileManager.swift; sourceTree = "<group>"; };
+		017E84712C04A6CC00EED6E3 /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		018D82522BFA84F4002E65BF /* FirebaseUserStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserStatusManager.swift; sourceTree = "<group>"; };
 		018D82542BFA852F002E65BF /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		018D82562BFA8561002E65BF /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
@@ -334,6 +344,9 @@
 		017E845B2BFE648100EED6E3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				017E846A2C04A15F00EED6E3 /* Manager */,
+				017E84692C04A15700EED6E3 /* Protocols */,
+				017E84682C04A14B00EED6E3 /* Presentation */,
 				017E845F2BFE64C100EED6E3 /* UI */,
 			);
 			path = Profile;
@@ -375,6 +388,7 @@
 		017E84602BFE64C500EED6E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				017E84662C049CD200EED6E3 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -385,6 +399,31 @@
 				017E84642BFE651B00EED6E3 /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		017E84682C04A14B00EED6E3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				017E846D2C04A28D00EED6E3 /* ProfileModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		017E84692C04A15700EED6E3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				017E846B2C04A24000EED6E3 /* LogOutButtonDelegate.swift */,
+				017E84712C04A6CC00EED6E3 /* Logout.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		017E846A2C04A15F00EED6E3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				017E846F2C04A3E900EED6E3 /* FirebaseProfileManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		018D824F2BFA84C7002E65BF /* Presentation */ = {
@@ -499,14 +538,19 @@
 				017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */,
 				017E84632BFE64E700EED6E3 /* ChatsViewController.swift in Sources */,
 				017E84652BFE651B00EED6E3 /* ProfileViewController.swift in Sources */,
+				017E84722C04A6CC00EED6E3 /* Logout.swift in Sources */,
+				017E84672C049CD200EED6E3 /* ProfileView.swift in Sources */,
 				018D82552BFA852F002E65BF /* UserStatus.swift in Sources */,
+				017E846E2C04A28D00EED6E3 /* ProfileModel.swift in Sources */,
 				017C0FF52BF154D5008F6EA1 /* CustomColor.swift in Sources */,
 				017C0FE72BF13A8B008F6EA1 /* LoginViewController.swift in Sources */,
+				017E84702C04A3E900EED6E3 /* FirebaseProfileManager.swift in Sources */,
 				017C0FE92BF140CE008F6EA1 /* RegisterViewController.swift in Sources */,
 				017C0FD42BF10D2A008F6EA1 /* SplashViewController.swift in Sources */,
 				017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */,
 				017E84562BFBC85300EED6E3 /* ChatAppUser.swift in Sources */,
 				017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */,
+				017E846C2C04A24000EED6E3 /* LogOutButtonDelegate.swift in Sources */,
 				017D26EE2BF1F10500E6D2E4 /* LoginModel.swift in Sources */,
 				018D82572BFA8561002E65BF /* SplashModel.swift in Sources */,
 				015004972BF688D900F2A948 /* FirebaseLoginManager.swift in Sources */,

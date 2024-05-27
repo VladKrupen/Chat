@@ -9,7 +9,7 @@ import Foundation
 
 final class RegisterModel {
     
-    weak var registerVC: RegisterViewController?
+    private weak var registerVC: RegisterViewController?
     private let userAuthentication: UserAuthentication
     private let userCreator: UserCreator
     
