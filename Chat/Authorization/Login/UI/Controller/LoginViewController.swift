@@ -5,13 +5,15 @@
 //  Created by Vlad on 12.05.24.
 //
 
-import UIKit
+import UIKit 
 
 final class LoginViewController: UIViewController {
  
     private let loginView: LoginView = LoginView()
     private let firebaseLoginManager = FirebaseLoginManager()
-    private lazy var model = LoginModel(loginVC: self, firebaseLoginManager: firebaseLoginManager)
+    private lazy var model = LoginModel(loginVC: self,
+                                        userAuthentication: firebaseLoginManager,
+                                        googleAuthorization: firebaseLoginManager)
     
     override func loadView() {
         super.loadView()
@@ -55,6 +57,14 @@ final class LoginViewController: UIViewController {
         }
     }
     
+    func showSpiner() {
+        loginView.showSpiner()
+    }
+    
+    func hideSpiner() {
+        loginView.hideSpiner()
+    }
+    
     private func setupNavigationItem () {
         navigationItem.title = "Вход"
         let rightBarButton = UIBarButtonItem(title: "Регистрация",
@@ -66,6 +76,7 @@ final class LoginViewController: UIViewController {
     
     private func setupDelegates() {
         loginView.loginButtonDelegate = self
+        loginView.googleLoginButtonDelegate = self
     }
 }
 
@@ -82,5 +93,12 @@ extension LoginViewController {
 extension LoginViewController: LoginButtonDelegate {
     func loginButtonPressed(email: String, password: String) {
         model.userLogin(email: email, password: password)
+    }
+}
+
+//MARK: - GoogleLoginButtonDelegate
+extension LoginViewController: GoogleLoginButtonDelegate {
+    func googleLoginButtonPressed() {
+        model.loginUsingGoogle(loginVC: self)
     }
 }

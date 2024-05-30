@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 final class LoginView: UIView {
     
     weak var loginButtonDelegate: LoginButtonDelegate?
+    weak var googleLoginButtonDelegate: GoogleLoginButtonDelegate?
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -88,6 +90,22 @@ final class LoginView: UIView {
         return button
     }()
     
+    private lazy var googleLoginButton: GIDSignInButton = {
+        let button = GIDSignInButton()
+        button.style = .wide
+        button.addTarget(self, action: #selector(googleLoginButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let spinerView: UIActivityIndicatorView = {
+        let spinerView = UIActivityIndicatorView(style: .large)
+        spinerView.color = CustomColor().customBlue
+        spinerView.hidesWhenStopped = true
+        spinerView.translatesAutoresizingMaskIntoConstraints = false
+        return spinerView
+    }()
+    
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -104,11 +122,21 @@ final class LoginView: UIView {
         passwordField.text = ""
     }
     
+    func showSpiner() {
+        spinerView.startAnimating()
+    }
+    
+    func hideSpiner() {
+        spinerView.stopAnimating()
+    }
+    
     private func layoutElements() {
         layoutScrollView()
         layoutLogoImage()
         layoutStackField()
         layoutLoginButton()
+        layoutGoogleLoginButton()
+        layoutSpinerView()
     }
     
     private func layoutScrollView() {
@@ -157,6 +185,26 @@ final class LoginView: UIView {
             loginButton.trailingAnchor.constraint(equalTo: stackField.trailingAnchor)
         ])
     }
+    
+    private func layoutGoogleLoginButton() {
+        scrollView.addSubview(googleLoginButton)
+        
+        NSLayoutConstraint.activate([
+            googleLoginButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 10),
+            googleLoginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            googleLoginButton.leadingAnchor.constraint(equalTo: loginButton.leadingAnchor),
+            googleLoginButton.trailingAnchor.constraint(equalTo: loginButton.trailingAnchor)
+        ])
+    }
+    
+    private func layoutSpinerView() {
+        addSubview(spinerView)
+        
+        NSLayoutConstraint.activate([
+            spinerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            spinerView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
 }
 
 //MARK: - OBJC
@@ -167,6 +215,10 @@ extension LoginView {
         guard let email = emailField.text,
               let password = passwordField.text else { return }
         loginButtonDelegate?.loginButtonPressed(email: email, password: password)
+    }
+    
+    @objc private func googleLoginButtonTapped() {
+        googleLoginButtonDelegate?.googleLoginButtonPressed()
     }
 }
 

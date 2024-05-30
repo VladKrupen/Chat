@@ -7,7 +7,6 @@
 
 import UIKit
 import Lottie
-import FirebaseAuth
 
 final class SplashViewController: UIViewController {
     
@@ -21,7 +20,6 @@ final class SplashViewController: UIViewController {
         view.backgroundColor = .white
         setupLottieAnimation()
         showAnimation()
-//        try? Auth.auth().signOut()
     }
     
     func moveToLoginScreen() {
