@@ -134,6 +134,14 @@ final class RegisterView: UIView {
         return button
     }()
     
+    private let spinerView: UIActivityIndicatorView = {
+        let spinerView = UIActivityIndicatorView(style: .large)
+        spinerView.color = .darkGray
+        spinerView.hidesWhenStopped = true
+        spinerView.translatesAutoresizingMaskIntoConstraints = false
+        return spinerView
+    }()
+    
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -155,6 +163,14 @@ final class RegisterView: UIView {
         avatarImage.image = image
     }
     
+    func showSpiner() {
+        spinerView.startAnimating()
+    }
+    
+    func hideSpiner() {
+        spinerView.stopAnimating()
+    }
+    
     private func setupTapGestureImageView() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(changeAvatarDidTap))
         avatarImage.addGestureRecognizer(gesture)
@@ -165,6 +181,7 @@ final class RegisterView: UIView {
         layoutLogoImage()
         layoutStackField()
         layoutRegisterButton()
+        layoutSpinerView()
     }
     
     private func layoutScrollView() {
@@ -217,6 +234,15 @@ final class RegisterView: UIView {
             registerButton.leadingAnchor.constraint(equalTo: stackField.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: stackField.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 20)
+        ])
+    }
+    
+    private func layoutSpinerView() {
+        addSubview(spinerView)
+        
+        NSLayoutConstraint.activate([
+            spinerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            spinerView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GoogleAuthorization {
-    func loginUsingGoogle(loginVC: LoginViewController, errorCompletion: @escaping (Error?) -> Void, succesCompletion: @escaping () -> Void)
+    func loginUsingGoogle(loginVC: LoginViewController, spinerCompletion: @escaping () -> Void, errorCompletion: @escaping (Error?) -> Void, succesCompletion: @escaping () -> Void)
 }

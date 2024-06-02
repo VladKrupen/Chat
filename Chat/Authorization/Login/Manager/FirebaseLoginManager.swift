@@ -21,7 +21,7 @@ final class FirebaseLoginManager: UserAuthentication, GoogleAuthorization {
         }
     }
     
-    func loginUsingGoogle(loginVC: LoginViewController, errorCompletion: @escaping ((any Error)?) -> Void, succesCompletion: @escaping () -> Void) {
+    func loginUsingGoogle(loginVC: LoginViewController, spinerCompletion: @escaping () -> Void, errorCompletion: @escaping ((any Error)?) -> Void, succesCompletion: @escaping () -> Void) {
         guard let clientID = FirebaseApp.app()?.options.clientID else {
             let error = NSError(domain: "Не удалось получить id", code: 401)
             errorCompletion(error)
@@ -32,6 +32,7 @@ final class FirebaseLoginManager: UserAuthentication, GoogleAuthorization {
         GIDSignIn.sharedInstance.configuration = config
 
         GIDSignIn.sharedInstance.signIn(withPresenting: loginVC) { [weak self] result, error in
+            spinerCompletion()
             guard error == nil else {
                 let error = NSError(domain: "Не удалось войти в систему", code: 401)
                 errorCompletion(error)

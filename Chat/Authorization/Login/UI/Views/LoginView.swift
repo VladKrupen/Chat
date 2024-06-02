@@ -100,7 +100,7 @@ final class LoginView: UIView {
     
     private let spinerView: UIActivityIndicatorView = {
         let spinerView = UIActivityIndicatorView(style: .large)
-        spinerView.color = CustomColor().customBlue
+        spinerView.color = .darkGray
         spinerView.hidesWhenStopped = true
         spinerView.translatesAutoresizingMaskIntoConstraints = false
         return spinerView

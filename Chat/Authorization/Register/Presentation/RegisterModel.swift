@@ -31,13 +31,16 @@ final class RegisterModel {
             registerVC?.showAlertErrorShortPassword()
             return
         }
+        registerVC?.showSpiner()
         userAuthentication.authUser(email: email, password: password) { [weak self] error in
             guard error == nil else {
                 self?.registerVC?.showAlertIncorrectEmail()
+                self?.registerVC?.hideSpiner()
                 return
             }
             self?.userCreator.createUser(firstname: firstname, lastname: lastname, email: email) { [weak self] _ in
                 self?.registerVC?.moveToMainTabBarController()
+                self?.registerVC?.hideSpiner()
             }
         }
     }

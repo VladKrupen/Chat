@@ -22,32 +22,38 @@ final class LoginModel {
     }
     
     func userLogin(email: String, password: String) {
+        loginVC?.showSpiner()
         guard !email.isEmpty, !password.isEmpty else {
             loginVC?.showAlertUserLoginEmpty()
+            loginVC?.hideSpiner()
             return
         }
         
         userAuthentication.authUser(email: email, password: password) { [weak self] error in
             guard error == nil else {
                 self?.loginVC?.showAlertIncorrectData()
+                self?.loginVC?.hideSpiner()
                 return
             }
             self?.loginVC?.moveToMainTabBarController()
+            self?.loginVC?.hideSpiner()
         }
     }
     
     func loginUsingGoogle(loginVC: LoginViewController) {
-        googleAuthorization.loginUsingGoogle(loginVC: loginVC) { [weak self] error in
+        googleAuthorization.loginUsingGoogle(loginVC: loginVC) { [weak self] in
             self?.loginVC?.showSpiner()
+        } errorCompletion: { [weak self] error in
             guard error == nil else {
                 if let error = error {
                     print(error.localizedDescription)
                 }
+                self?.loginVC?.hideSpiner()
                 return
             }
-        } succesCompletion: {
-            self.loginVC?.moveToMainTabBarController()
-            self.loginVC?.hideSpiner()
+        } succesCompletion: { [weak self] in
+            self?.loginVC?.moveToMainTabBarController()
+            self?.loginVC?.hideSpiner()
         }
     }
 }

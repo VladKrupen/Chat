@@ -61,6 +61,14 @@ final class RegisterViewController: UIViewController {
         }
     }
     
+    func showSpiner() {
+        registerView.showSpiner()
+    }
+    
+    func hideSpiner() {
+        registerView.hideSpiner()
+    }
+    
     private func setupDelegates() {
         registerView.registerButtonDelegate = self
         registerView.changingProfileAvatarDelegate = self
