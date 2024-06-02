@@ -24,6 +24,8 @@ final class ChatsViewController: UIViewController {
     
     private func setupNavigationItem() {
         navigationItem.title = "Чаты"
+        let composeChatButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeChatButtonTapped))
+        navigationItem.rightBarButtonItem = composeChatButton
     }
     
     private func setupDelegates() {
@@ -34,8 +36,9 @@ final class ChatsViewController: UIViewController {
 
 //MARK: - OBJC
 extension ChatsViewController {
-    @objc private func addChatButtonTapped() {
-        
+    @objc private func composeChatButtonTapped() {
+        let newChatVC = NewChatViewController()
+        present(UINavigationController(rootViewController: newChatVC), animated: true)
     }
 }
 

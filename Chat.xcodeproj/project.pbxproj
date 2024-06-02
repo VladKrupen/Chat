@@ -52,6 +52,8 @@
 		01B11A3E2C0A51B2008C0FDE /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B11A3D2C0A51B2008C0FDE /* ChatsView.swift */; };
 		01B5FDB72C0C8D6100932EB5 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 01B5FDB62C0C8D6100932EB5 /* MessageKit */; };
 		01B5FDBA2C0C8F2600932EB5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5FDB92C0C8F2600932EB5 /* Message.swift */; };
+		01B5FDBF2C0CBCC000932EB5 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5FDBE2C0CBCC000932EB5 /* NewChatViewController.swift */; };
+		01B5FDC22C0CC76300932EB5 /* NewChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B5FDC12C0CC76300932EB5 /* NewChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		018D82562BFA8561002E65BF /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
 		01B11A3D2C0A51B2008C0FDE /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
 		01B5FDB92C0C8F2600932EB5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		01B5FDBE2C0CBCC000932EB5 /* NewChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		01B5FDC12C0CC76300932EB5 /* NewChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,8 +221,9 @@
 				017C0FE52BF13A54008F6EA1 /* Authorization */,
 				017E84572BFE626B00EED6E3 /* TabBarController */,
 				017E845A2BFE63ED00EED6E3 /* Chats */,
-				017E845B2BFE648100EED6E3 /* Profile */,
 				01657DD92C0B556F009A5AB9 /* Conversation */,
+				01B5FDBB2C0CBC9400932EB5 /* New chat */,
+				017E845B2BFE648100EED6E3 /* Profile */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -514,6 +519,39 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		01B5FDBB2C0CBC9400932EB5 /* New chat */ = {
+			isa = PBXGroup;
+			children = (
+				01B5FDBC2C0CBCAB00932EB5 /* UI */,
+			);
+			path = "New chat";
+			sourceTree = "<group>";
+		};
+		01B5FDBC2C0CBCAB00932EB5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				01B5FDBD2C0CBCAF00932EB5 /* Controller */,
+				01B5FDC02C0CC75100932EB5 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		01B5FDBD2C0CBCAF00932EB5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01B5FDBE2C0CBCC000932EB5 /* NewChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		01B5FDC02C0CC75100932EB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01B5FDC12C0CC76300932EB5 /* NewChatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -603,6 +641,7 @@
 				015004942BF683D000F2A948 /* UserAuthentication.swift in Sources */,
 				018D82532BFA84F4002E65BF /* FirebaseUserStatusManager.swift in Sources */,
 				017E84592BFE629F00EED6E3 /* MainTabBarController.swift in Sources */,
+				01B5FDC22C0CC76300932EB5 /* NewChatView.swift in Sources */,
 				017E847B2C05B4BB00EED6E3 /* GoogleLoginButtonDelegate.swift in Sources */,
 				017C0FF22BF14482008F6EA1 /* LoginView.swift in Sources */,
 				017D26F42BF2103900E6D2E4 /* RegisterView.swift in Sources */,
@@ -619,6 +658,7 @@
 				017C0FE92BF140CE008F6EA1 /* RegisterViewController.swift in Sources */,
 				017C0FD42BF10D2A008F6EA1 /* SplashViewController.swift in Sources */,
 				017D26F72BF214DE00E6D2E4 /* RegisterModel.swift in Sources */,
+				01B5FDBF2C0CBCC000932EB5 /* NewChatViewController.swift in Sources */,
 				017E84562BFBC85300EED6E3 /* ChatAppUser.swift in Sources */,
 				01657DDE2C0B55EE009A5AB9 /* ConversationViewController.swift in Sources */,
 				017D26FA2BF2166100E6D2E4 /* RegisterButtonDelegate.swift in Sources */,
