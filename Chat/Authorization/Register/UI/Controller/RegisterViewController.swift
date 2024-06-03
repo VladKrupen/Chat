@@ -11,7 +11,7 @@ final class RegisterViewController: UIViewController {
     
     private let registerView: RegisterView = RegisterView()
     private let firebaseRegistrationManager = FirebaseRegistrationManager()
-    private lazy var model = RegisterModel(registerVC: self, userAuthentication: firebaseRegistrationManager, userCreator: firebaseRegistrationManager)
+    private lazy var model = RegisterModel(registerVC: self, userAuthentication: firebaseRegistrationManager, userCreator: firebaseRegistrationManager, firebase: firebaseRegistrationManager, imageUploader: firebaseRegistrationManager)
     
     override func loadView() {
         super.loadView()
@@ -78,7 +78,7 @@ final class RegisterViewController: UIViewController {
 //MARK: - RegisterButtonDelegate
 extension RegisterViewController: RegisterButtonDelegate {
     func registerButtonPressed(firstname: String, lastname: String, email: String, password: String) {
-        model.userRegister(firstname: firstname, lastname: lastname, email: email, password: password)
+        model.userRegister(image: model.selectedImageData, firstname: firstname, lastname: lastname, email: email, password: password)
     }
 }
 
@@ -134,6 +134,7 @@ extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             registerView.changeAvatarImage(image: image)
+            model.selectedImageData = image.jpegData(compressionQuality: 0.8) ?? Data()
         }
         picker.dismiss(animated: true)
     }

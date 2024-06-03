@@ -27,7 +27,7 @@ final class RegisterView: UIView {
         imageView.layer.borderColor = UIColor.black.cgColor
         imageView.tintColor = .white
         imageView.contentMode = .scaleToFill
-        imageView.backgroundColor = CustomColor().customBlue
+        imageView.backgroundColor = CustomColor.customBlue
         imageView.isUserInteractionEnabled = true
         imageView.clipsToBounds = true
         imageView.layer.masksToBounds = true
@@ -42,7 +42,7 @@ final class RegisterView: UIView {
         firstnameField.returnKeyType = .continue
         firstnameField.layer.cornerRadius = 12
         firstnameField.layer.borderWidth = 1
-        firstnameField.layer.borderColor = CustomColor().customBlue.cgColor
+        firstnameField.layer.borderColor = CustomColor.customBlue.cgColor
         firstnameField.placeholder = "Имя"
         firstnameField.font = UIFont.systemFont(ofSize: 25)
         firstnameField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
@@ -61,7 +61,7 @@ final class RegisterView: UIView {
         lastnameField.returnKeyType = .continue
         lastnameField.layer.cornerRadius = 12
         lastnameField.layer.borderWidth = 1
-        lastnameField.layer.borderColor = CustomColor().customBlue.cgColor
+        lastnameField.layer.borderColor = CustomColor.customBlue.cgColor
         lastnameField.placeholder = "Фамилия"
         lastnameField.font = UIFont.systemFont(ofSize: 25)
         lastnameField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
@@ -81,7 +81,7 @@ final class RegisterView: UIView {
         emailField.returnKeyType = .continue
         emailField.layer.cornerRadius = 12
         emailField.layer.borderWidth = 1
-        emailField.layer.borderColor = CustomColor().customBlue.cgColor
+        emailField.layer.borderColor = CustomColor.customBlue.cgColor
         emailField.placeholder = "Email"
         emailField.font = UIFont.systemFont(ofSize: 25)
         emailField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
@@ -102,7 +102,7 @@ final class RegisterView: UIView {
         passwordField.textContentType = .oneTimeCode
         passwordField.layer.cornerRadius = 12
         passwordField.layer.borderWidth = 1
-        passwordField.layer.borderColor = CustomColor().customBlue.cgColor
+        passwordField.layer.borderColor = CustomColor.customBlue.cgColor
         passwordField.placeholder = "Пароль"
         passwordField.font = UIFont.systemFont(ofSize: 25)
         passwordField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
@@ -127,7 +127,7 @@ final class RegisterView: UIView {
         button.setTitle("Зарегистрироваться", for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 12
-        button.backgroundColor = CustomColor().customBlue
+        button.backgroundColor = CustomColor.customBlue
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false

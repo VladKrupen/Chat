@@ -8,5 +8,5 @@
 import Foundation
 
 protocol UserCreator {
-    func createUser(firstname: String, lastname: String, email: String, completion: @escaping (Error?) -> Void)
+    func createUser(imageURLString: String, firstname: String, lastname: String, email: String, completion: @escaping (Error?) -> Void)
 }

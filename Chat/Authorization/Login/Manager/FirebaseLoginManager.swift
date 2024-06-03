@@ -61,7 +61,7 @@ final class FirebaseLoginManager: UserAuthentication, GoogleAuthorization {
                     errorCompletion(error)
                     return
                 }
-                self?.firebaseRegistrationManager.createUser(firstname: profile.givenName ?? "", lastname: profile.familyName ?? "", email: profile.email) { [weak self] error in
+                self?.firebaseRegistrationManager.createUser(imageURLString: profile.imageURL(withDimension: 400)?.absoluteString ?? "", firstname: profile.givenName ?? "", lastname: profile.familyName ?? "", email: profile.email) { [weak self] error in
                     guard error == nil else {
                         let error = NSError(domain: "Не удалось создать профиль", code: 401)
                         errorCompletion(error)

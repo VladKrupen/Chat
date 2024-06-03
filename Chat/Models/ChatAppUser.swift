@@ -12,4 +12,5 @@ struct ChatAppUser: Codable {
     let firstname: String
     let lastname: String
     let email: String
+    let imageURLString: String
 }

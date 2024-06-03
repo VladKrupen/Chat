@@ -37,7 +37,7 @@ final class LoginView: UIView {
         emailField.returnKeyType = .continue
         emailField.layer.cornerRadius = 12
         emailField.layer.borderWidth = 1
-        emailField.layer.borderColor = CustomColor().customBlue.cgColor
+        emailField.layer.borderColor = CustomColor.customBlue.cgColor
         emailField.placeholder = "Email"
         emailField.font = UIFont.systemFont(ofSize: 25)
         emailField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
@@ -58,7 +58,7 @@ final class LoginView: UIView {
         passwordField.textContentType = .oneTimeCode
         passwordField.layer.cornerRadius = 12
         passwordField.layer.borderWidth = 1
-        passwordField.layer.borderColor = CustomColor().customBlue.cgColor
+        passwordField.layer.borderColor = CustomColor.customBlue.cgColor
         passwordField.placeholder = "Пароль"
         passwordField.font = UIFont.systemFont(ofSize: 25)
         passwordField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
@@ -83,7 +83,7 @@ final class LoginView: UIView {
         button.setTitle("Войти", for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 12
-        button.backgroundColor = CustomColor().customBlue
+        button.backgroundColor = CustomColor.customBlue
         button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
